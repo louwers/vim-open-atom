@@ -7,6 +7,7 @@ function! s:open_atom(file)
   else
     silent exec "!atom " . shellescape(f) " &"
   endif
+  redraw
 endfunction
 
 command! -nargs=? -complete=file OpenAtom call s:open_atom(<q-args>)
